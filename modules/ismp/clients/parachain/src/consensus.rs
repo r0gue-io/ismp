@@ -29,7 +29,7 @@ use ismp::{
     host::{IsmpHost, StateMachine},
     messaging::StateCommitmentHeight,
 };
-use ismp::ISMP_ID;
+use pallet_ismp::primitives::ISMP_ID;
 use cumulus_pallet_parachain_system::{RelaychainDataProvider, RelaychainStateProvider};
 use primitive_types::H256;
 use sp_consensus_aura::{Slot, AURA_ENGINE_ID};
@@ -206,6 +206,11 @@ where
     ) -> Result<(), Error> {
         // There are no fraud proofs for the parachain client
         Ok(())
+    }
+
+    /// The consensus client Id provided by this client.
+    fn consensus_client_id(&self) -> ConsensusClientId {
+        PARACHAIN_CONSENSUS_ID
     }
 
     fn state_machine(&self, _id: StateMachine) -> Result<Box<dyn StateMachineClient>, Error> {
