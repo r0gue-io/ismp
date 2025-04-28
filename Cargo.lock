@@ -5241,7 +5241,7 @@ dependencies = [
  "rlp-derive",
  "thiserror 2.0.12",
  "tiny-keccak",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
@@ -5586,7 +5586,7 @@ dependencies = [
  "pallet-ismp-host-executive",
  "parity-scale-codec",
  "sp-crypto-hashing 0.1.0 (git+https://github.com/paritytech/polkadot-sdk?tag=polkadot-stable2503)",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
@@ -9239,7 +9239,7 @@ dependencies = [
  "tokio",
  "tracing",
  "tracing-subscriber 0.3.19",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
@@ -13915,7 +13915,7 @@ dependencies = [
  "sp-runtime 41.1.0 (git+https://github.com/paritytech/polkadot-sdk?tag=polkadot-stable2503)",
  "sp-trie 39.1.0 (git+https://github.com/paritytech/polkadot-sdk?tag=polkadot-stable2503)",
  "substrate-state-machine",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
@@ -13944,7 +13944,7 @@ dependencies = [
  "sp-storage 22.0.0 (git+https://github.com/paritytech/polkadot-sdk?tag=polkadot-stable2503)",
  "sp-trie 39.1.0 (git+https://github.com/paritytech/polkadot-sdk?tag=polkadot-stable2503)",
  "tower 0.4.13",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
@@ -14026,7 +14026,7 @@ dependencies = [
  "subxt-utils",
  "token-gateway-primitives",
  "tokio",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
  "xcm-simulator",
  "xcm-simulator-example",
  "zstd-safe 7.2.4",
@@ -24416,7 +24416,7 @@ dependencies = [
  "subxt 0.30.1",
  "subxt-utils",
  "tokio",
- "trie-db 0.29.1",
+ "trie-db 0.30.0",
 ]
 
 [[package]]
