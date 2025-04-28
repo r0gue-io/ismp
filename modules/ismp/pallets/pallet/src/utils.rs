@@ -17,7 +17,7 @@
 
 use alloc::collections::BTreeMap;
 
-use codec::{Decode, Encode};
+use codec::{Decode, DecodeWithMemTracking, Encode};
 use frame_support::PalletId;
 use ismp::{
 	consensus::{ConsensusClient, ConsensusStateId},
@@ -30,7 +30,7 @@ use sp_core::{
 use sp_std::prelude::*;
 
 /// Params to update the unbonding period for a consensus state
-#[derive(Debug, Clone, Encode, Decode, scale_info::TypeInfo, PartialEq, Eq)]
+#[derive(Debug, Clone, Encode, Decode, DecodeWithMemTracking, scale_info::TypeInfo, PartialEq, Eq)]
 pub struct UpdateConsensusState {
 	/// Consensus state identifier
 	pub consensus_state_id: ConsensusStateId,

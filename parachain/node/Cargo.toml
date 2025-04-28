@@ -68,7 +68,6 @@ sp-timestamp = { workspace = true }
 sp-transaction-pool = { workspace = true }
 substrate-frame-rpc-system = { workspace = true }
 substrate-prometheus-endpoint = { workspace = true }
-try-runtime-cli = { workspace = true,  optional = true }
 sp-mmr-primitives = { workspace = true,  default-features = true }
 frame-metadata-hash-extension = { workspace = true, default-features = true }
 
@@ -103,14 +102,12 @@ substrate-build-script-utils = { version = "11.0.0" }
 [features]
 default = []
 runtime-benchmarks = [
-	"try-runtime-cli/try-runtime",
 	"gargantua-runtime/runtime-benchmarks",
 #	"messier-runtime/runtime-benchmarks",
 	"nexus-runtime/runtime-benchmarks",
 	"polkadot-cli/runtime-benchmarks",
 ]
 try-runtime = [
-	"try-runtime-cli/try-runtime",
 	"gargantua-runtime/try-runtime",
 #	"messier-runtime/try-runtime"
 ]

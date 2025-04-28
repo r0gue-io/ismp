@@ -246,13 +246,11 @@ impl TryFrom<EvmHostParam> for EvmHostParamsAbi {
 		Ok(EvmHostParamsAbi {
 			defaultTimeout: value.default_timeout.try_into().map_err(anyhow::Error::msg)?,
 			defaultPerByteFee: {
-				let mut buf = [0u8; 32];
-				value.default_per_byte_fee.to_little_endian(&mut buf);
+				let buf: [u8;32] = value.default_per_byte_fee.to_little_endian();
 				alloy_primitives::U256::from_le_bytes(buf)
 			},
 			stateCommitmentFee: {
-				let mut buf = [0u8; 32];
-				value.state_commitment_fee.to_little_endian(&mut buf);
+				let buf: [u8;32] = value.state_commitment_fee.to_little_endian();
 				alloy_primitives::U256::from_le_bytes(buf)
 			},
 			feeToken: value.fee_token.0.try_into().map_err(anyhow::Error::msg)?,
@@ -276,8 +274,7 @@ impl TryFrom<EvmHostParam> for EvmHostParamsAbi {
 					Ok::<_, anyhow::Error>(PerByteFeeAbi {
 						stateIdHash: p.state_id.0.try_into().map_err(anyhow::Error::msg)?,
 						perByteFee: {
-							let mut buf = [0u8; 32];
-							p.per_byte_fee.to_little_endian(&mut buf);
+							let buf: [u8;32] = p.per_byte_fee.to_little_endian();
 							alloy_primitives::U256::from_le_bytes(buf)
 						},
 					})

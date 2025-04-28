@@ -21,7 +21,7 @@ use crate::{
 	router::{GetRequest, GetResponse, PostRequest, PostResponse, Request, Response},
 };
 use alloc::vec::Vec;
-use codec::{Decode, Encode};
+use codec::{Decode, DecodeWithMemTracking, Encode, Error, Input};
 use primitive_types::H256;
 use scale_info::TypeInfo;
 
@@ -47,7 +47,7 @@ pub struct StateCommitmentVetoed {
 
 /// Emitted when a request or response is successfully handled.
 #[derive(
-	Clone, Debug, TypeInfo, Encode, Decode, serde::Deserialize, serde::Serialize, PartialEq, Eq,
+	Clone, Debug, TypeInfo, Encode, Decode, DecodeWithMemTracking, serde::Deserialize, serde::Serialize, PartialEq, Eq,
 )]
 pub struct RequestResponseHandled {
 	/// The commitment to the request or response
@@ -59,7 +59,7 @@ pub struct RequestResponseHandled {
 
 /// Emitted when a timeout is successfully handled.
 #[derive(
-	Clone, Debug, TypeInfo, Encode, Decode, serde::Deserialize, serde::Serialize, PartialEq, Eq,
+	Clone, Debug, TypeInfo, Encode, Decode, DecodeWithMemTracking, serde::Deserialize, serde::Serialize, PartialEq, Eq,
 )]
 pub struct TimeoutHandled {
 	/// The commitment to the request or response
