@@ -41,7 +41,7 @@ pub struct UpdateConsensusState {
 }
 
 /// Holds a commitment to either a request or response
-#[derive(Debug, Clone, Encode, Decode, scale_info::TypeInfo, PartialEq, Eq)]
+#[derive(Debug, Clone, Encode, Decode, DecodeWithMemTracking, scale_info::TypeInfo, PartialEq, Eq)]
 pub enum MessageCommitment {
 	/// A request message
 	Request(H256),
@@ -50,7 +50,7 @@ pub enum MessageCommitment {
 }
 
 /// Params to add more funds for request delivery
-#[derive(Debug, Clone, Encode, Decode, scale_info::TypeInfo, PartialEq, Eq)]
+#[derive(Debug, Clone, Encode, Decode, DecodeWithMemTracking, scale_info::TypeInfo, PartialEq, Eq)]
 pub struct FundMessageParams<Balance> {
 	/// Message commitment
 	pub commitment: MessageCommitment,
