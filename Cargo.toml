@@ -343,9 +343,9 @@ tesseract-primitives = { path = "tesseract/primitives" }
 tesseract-substrate = { path = "tesseract/substrate" }
 transaction-fees = { path = "tesseract/fees" }
 
+
 [workspace.dependencies.ethabi]
-git = "https://github.com/r0gue-io/ethabi"
-branch = "unsafe-0.15.1-fixes"
+version = "18.0.0"
 default-features = false
 features = [
     "rlp",
