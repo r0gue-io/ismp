@@ -210,7 +210,7 @@ sc-consensus = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polk
 sc-consensus-grandpa-rpc = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
 sc-consensus-manual-seal = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
 sc-executor = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
-sc-network = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
+sc-network = { version = "0.49.1" }
 sc-network-common = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
 sc-network-sync = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
 sc-offchain = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4" }
