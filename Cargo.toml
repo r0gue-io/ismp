@@ -331,7 +331,7 @@ gargantua-runtime = { path = "./parachain/runtimes/gargantua", default-features 
 nexus-runtime = { path = "./parachain/runtimes/nexus", default-features = false }
 
 # tesseract
-cumulus-pallet-parachain-system = { version = "0.20.0", default-features = false }
+cumulus-pallet-parachain-system = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-stable2503-4", default-features = false }
 telemetry-server = { path = "tesseract/telemetry" }
 tesseract = { path = "tesseract/relayer" }
 tesseract-config = { path = "tesseract/config" }
