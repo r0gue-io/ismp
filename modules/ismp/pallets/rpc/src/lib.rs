@@ -310,7 +310,7 @@ where
 			.map_err(|_| runtime_error_into_rpc_error("Error generating child trie proof"))?;
 		let state = self
 			.backend
-			.state_at(at)
+			.state_at(at, sc_client_api::backend::TrieCacheContext::Untrusted)
 			.map_err(|_| runtime_error_into_rpc_error("Error accessing state backend"))?;
 		let child_root = state
 			.storage(child_info.prefixed_storage_key().as_slice())
